@@ -1,0 +1,171 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" 
+          content="width=device-width, 
+                   initial-scale=1.0">
+    <title>Color Generator</title>
+    <link rel="stylesheet"
+          href="style.css">
+    <link rel="stylesheet" 
+          href=
+"https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="card">
+            <h1 class="text-success">
+                Color Generator</h1>
+            <h3 class="mb-4">Color
+                Generator For Developers
+                </h3>
+            <input type="color" 
+                   id="color-box" 
+                   onchange="updatePicker()"
+                   value="#FFFFFF">
+
+            <div id="color-type">
+                <label for="color-type-select">
+                      Type:
+                  </label>
+                <select id="color-type-select">
+                    <option value="rgb">
+                        RGB</option>
+                    <option value="hex">
+                        Hex</option>
+                    <option value="cmyk">
+                        CMYK</option>
+                </select>
+            </div>
+
+            <div id="rgb-inputs" class="color-inputs">
+                <div class="input-group">
+                    <label class="slider-label">Red</label>
+                    <input type="range"
+                           min="0" 
+                           max="255" 
+                           value="255" 
+                           class="slider" id="red-slider">
+                    <span class="slider-value" 
+                          id="red-value">
+                          255
+                      </span>
+                </div>
+                <div class="input-group">
+                    <label class="slider-label">Green</label>
+                    <input type="range" 
+                           min="0" 
+                           max="255" 
+                           value="255" 
+                           class="slider" id="green-slider">
+                    <span class="slider-value" 
+                          id="green-value">
+                          255
+                      </span>
+                </div>
+                <div class="input-group">
+                    <label class="slider-label">
+                          Blue
+                      </label>
+                    <input type="range"
+                           min="0" 
+                           max="255" 
+                           value="255"
+                           class="slider"
+                           id="blue-slider">
+                    <span class="slider-value"
+                          id="blue-value">
+                          255
+                      </span>
+                </div>
+            </div>
+
+            <div id="hex-input" 
+                 class="color-inputs">
+                <label for="hex-color">
+                    Hex Color:
+                  </label>
+                <input type="text"
+                       id="hex-color" 
+                       value="#FFFFFF">
+            </div>
+
+            <div id="cmyk-inputs" 
+                 class="color-inputs">
+                <div class="input-group">
+                    <label class="slider-label">
+                          Cyan
+                      </label>
+                    <input type="range"
+                           min="0"
+                           max="100" 
+                           value="0"
+                           class="slider" 
+                           id="cyan-slider">
+                    <span class="slider-value" 
+                          id="cyan-value">
+                          0
+                      </span>
+                </div>
+                <div class="input-group">
+                    <label class="slider-label">
+                          Magenta
+                      </label>
+                    <input type="range" 
+                           min="0" 
+                           max="100"
+                           value="0" 
+                           class="slider" 
+                           id="magenta-slider">
+                    <span class="slider-value" 
+                          id="magenta-value">
+                          0
+                      </span>
+                </div>
+                <div class="input-group">
+                    <label class="slider-label">
+                          Yellow
+                      </label>
+                    <input type="range"
+                           min="0" 
+                           max="100" 
+                           value="0" 
+                           class="slider" 
+                           id="yellow-slider">
+                    <span class="slider-value"
+                          id="yellow-value">
+                          0
+                      </span>
+                </div>
+                <div class="input-group">
+                    <label class="slider-label">
+                          Black
+                      </label>
+                    <input type="range"
+                           min="0"
+                           max="100" 
+                           value="0" 
+                           class="slider" id="black-slider">
+                    <span class="slider-value" 
+                          id="black-value">
+                          0
+                      </span>
+                </div>
+            </div>
+
+            <div id="color-code"></div>
+            <button class="generate-button" 
+                    id="copy-button">
+              Copy Color Code
+              <i class="far fa-copy icon"></i>
+              </button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
